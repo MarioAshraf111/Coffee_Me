@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abo Auf</title>
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+            margin-left: 270px;
+        }
+
+            .image-container figure {
+                text-align: center;
+                width: 200px;
+            }
+
+                .image-container figure:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+                }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
+
+            .image-container figcaption {
+                margin-top: 5px;
+                font-size: 14px;
+                color: #ffffff;
+                background-color: rgba(128, 128, 128, 0.689);
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+        figcaption:hover {
+            background-color: #000000;
+        }
+
+        .image-container figure button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        body {
+            background-image: url('img/background7.jpg');
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: rgba(33, 33, 33, 0.9);
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(220, 204, 135, 0.1);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #coffee_me {
+            font-family: allura;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: rgba(66, 66, 66, 0.8);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .sidebar a:hover {
+                background-color: rgb(84, 82, 82);
+            }
+
+            .sidebar a.selected {
+                background-color: rgba(120, 120, 120, 1);
+                color: rgba(0, 0, 0, 0.9);
+                font-weight: bold;
+                border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+            }
+    </style>
+    <style>
+
+        #welcomeText {
+            font-size: 24px;
+            text-align: center;
+            color: rgb(4 4 4 / 80%);
+            margin: 50px auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: slideText 5s linear forwards;
+        }
+
+
+        @keyframes slideText {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+
+        #main-content {
+            display: none;
+        }
+
+        #welcomeText {
+            color: rgb(4 4 4 / 80%);
+            background-color: #5656579c;
+        }
+
+        .product-container {
+            margin-left: 25%;
+            margin-top: 50px;
+            padding: 20px;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .product-container:hover {
+                transform: scale(1.02);
+            }
+
+            .product-container p {
+                margin-top: 25px;
+                font-size: 24px;
+                color: rgb(4 4 4 / 80%);
+                background-color: #5656579c;
+            }
+
+
+        #cartCount {
+            font-weight: bold;
+            color: rgb(4 4 4 / 80%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="welcomeText">
+        <b color="white">Welcome To Coffee Me , Enjoy Your Coffee </b>
+    </div>
+    <div class="sidebar">
+        <h2 color="black" id="coffee_me">Coffee Me</h2>
+        <a href="index.html">Home</a>
+        <a href="40 dash.html">40 Dash</a>
+        <a href="abu_auf.html" class="selected">Abo Auf</a>
+        <a href="elnagar.html">El-Nagar</a>
+        <a href="accessory.html">Accessories</a>
+    </div>
+
+
+    <div class="image-container">
+
+        <figure>
+            <img src="auf/1 (4).jpg" alt="photo" />
+            <figcaption>Espresso Royal<br>800.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (3).jpg" alt="photo" />
+            <figcaption>Espresso (Flore)<br>500.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (2).jpg" alt="photo" />
+            <figcaption>Espresso (Denso)<br>460.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (5).jpg" alt="photo" />
+            <figcaption>Ground Espresso Coffee Barista<br>290.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (7).jpg" alt="photo" />
+            <figcaption>Filterd American Coffee<br>290.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (8).jpg" alt="photo" />
+            <figcaption>Columbian Espresso Coffee<br>290.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (24).jpg" alt="photo" />
+            <figcaption>French Coffee<br>275.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (25).jpg" alt="photo" />
+            <figcaption>Coffee with Chocolete Flavor<br>260.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (26).jpg" alt="photo" />
+            <figcaption>Coffee with Hazelnuts Flavor<br>260.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (28).jpg" alt="photo" />
+            <figcaption>Green Coffee<br>105.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (29).jpg" alt="photo" />
+            <figcaption>Instant Coffee Classic - 50 gm<br>90.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (30).jpg" alt="photo" />
+            <figcaption>Instant Coffee Classic - 100 gm<br>160.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (31).jpg" alt="photo" />
+            <figcaption>Instant Coffee Gold - 50 gm<br>290.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="auf/1 (32).jpg" alt="photo" />
+            <figcaption>Instant Coffee Gold - 100 gm<br>290.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (12).jpg" alt="photo" />
+            <figcaption>Dark Roasted Blended Barazillian Coffee Pack<br>130.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (13).jpg" alt="photo" />
+            <figcaption>Medium Roasted Blended Barazillian Coffee Pack<br>130.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="auf/1 (14).jpg" alt="photo" />
+            <figcaption>Light Roasted Blended Barazillian Coffee Pack<br>130.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (15).jpg" alt="photo" />
+            <figcaption>Dark Roasted Plain Barazillian Coffee Pack<br>100.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (16).jpg" alt="photo" />
+            <figcaption>Medium Roasted Plain Barazillian Coffee Pack<br>100.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="auf/1 (17).jpg" alt="photo" />
+            <figcaption>Light Roasted Plain Barazillian Coffee Pack<br>100.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (20).jpg" alt="photo" />
+            <figcaption>French Coffee<br>125.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (21).jpg" alt="photo" />
+            <figcaption>Hazelnut Coffee<br>110.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="auf/1 (22).jpg" alt="photo" />
+            <figcaption>Chocolate Coffee<br>110.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="auf/1 (23).jpg" alt="photo" />
+            <figcaption>Carmel Coffee<br>110.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (36).jpg" alt="photo" />
+            <figcaption>Arabic Coffee<br>140.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (27).jpg" alt="photo" />
+            <figcaption>Green Coffee - 20 pack<br>140.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (35).jpg" alt="photo" />
+            <figcaption>Instant Coffee Classic Box - 24 Packet<br>100.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="auf/1 (34).jpg" alt="photo" />
+            <figcaption>Instant Coffee Gold Box - 24 Packet<br>140.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="auf/1 (33).jpg" alt="photo" />
+            <figcaption>Instant Coffee Box (2x1)<br>160.00 EGP</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+    
+    </div>
+    <div class="product-container">
+
+        <b> <p> Number Of Products Added : <span id="cartCount">0</span></p></b>
+    </div>
+
+
+    <script>
+    let count = 0;
+
+    function addToCart() {
+        count++;
+        document.getElementById('cartCount').innerText = count;
+    }
+    </script>
+
+</body>
+
+</html>

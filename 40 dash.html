@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 Dash</title>
+    <link rel="stylesheet" href="40 dash.css" />
+    <style>
+        body {
+            background-image: url("40/background2.jpg");
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            padding: 20px;
+            margin-left: 270px;
+            gap: 10px;
+            justify-content: center;
+        }
+
+            .image-container figure:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            }
+
+        .figcaption:hover {
+            background-color: #000000;
+        }
+
+        .image-container figure {
+            text-align: center;
+            width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container figcaption {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #555;
+            color: #ffffff;
+            background-color: rgba(128, 128, 128, 0.689);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .image-container figure button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #5e83228c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #bab8b479;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(220, 204, 135, 0.1);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                font-family: allura;
+            }
+
+            .sidebar a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                margin: 15px 0;
+                padding: 10px;
+                background-color: #626364;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+                .sidebar a:hover {
+                    background-color: #edd4a5ac;
+                }
+
+                .sidebar a.selected {
+                    background-color: #bbc89cac;
+                    border-bottom: 3px solid #ffffff;
+                }
+    </style>
+    <style>
+
+        #welcomeText {
+            font-size: 24px;
+            text-align: center;
+            color: rgb(4 4 4 / 80%);
+            margin: 50px auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: slideText 5s linear forwards;
+        }
+
+
+        @keyframes slideText {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+
+        #main-content {
+            display: none;
+        }
+
+
+
+
+        .product {
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #welcomeText {
+            color: rgb(4 4 4 / 80%);
+            background-color: #5656579c;
+        }
+
+        .product-container {
+            margin-left: 25%;
+            margin-top: 50px;
+            padding: 20px;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .product-container:hover {
+                transform: scale(1.02);
+            }
+
+
+            .product-container button {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #28a745;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .product-container button:hover {
+                    background-color: #218838;
+                }
+
+            .product-container p {
+                margin-top: 25px;
+                font-size: 24px;
+                color: rgb(4 4 4 / 80%);
+                background-color: #5656579c;
+            }
+
+
+        #cartCount {
+            font-weight: bold;
+            color: rgb(4 4 4 / 80%);
+        }
+    </style>
+</head>
+<body>
+    <div id="welcomeText">
+        <b color="white">Welcome To Coffee Me , Enjoy Your Coffee </b>
+    </div>
+    <div class="sidebar">
+        <h2 color="black">Coffee Me</h2>
+        <a href="index.html">Home</a>
+        <a href="40 dash.html" class="selected">40 Dash</a>
+        <a href="abu_auf.html">Abo Auf</a>
+        <a href="elnagar.html">El-Nagar</a>
+        <a href="accessory.html">Accessories</a>
+    </div>
+    <div class="image-container">
+        <figure>
+            <img src="40/download (5).jfif" alt="photo" />
+            <figcaption>لدينا اقوى العروض و الخصومات</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/download (1).jfif" alt="photo" />
+            <figcaption>Energy Fuel Coffee - إنرجي فيول تركي<br />LE 350.00 <del>LE 380</del></figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="40/download (2).jfif" alt="photo" />
+            <figcaption>Hazelnut Coffee - قهوة بالبندق <br />LE 210.00 <del>LE 230</del> </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="40/download (3).jfif" alt="photo" />
+            <figcaption>
+                برازيلي تركي <br />LE 230.00 <del>LE 260</del>
+            </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/download (4).jfif" alt="photo" />
+            <figcaption>كولومبي تركي <br />LE 300.00 <del>LE 260</del></figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="40/download (4).jfif" alt="photo" />
+            <figcaption>جولدن بليند <br />LE 260.00 <del>LE 300</del> </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/download (4).jfif" alt="photo" />
+            <figcaption>سيلفير بليند<br />LE 210.00 <del>LE 210</del> </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/download (4).jfif" alt="photo" />
+            <figcaption> قهوة اسكندراني <br />LE 250.00 </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+
+
+            <img src="40/download (6).jfif" alt="photo" />
+            <figcaption>Ethiopian Single Origin - اثيوبي<br />LE 280.00</figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/download (7).jfif" alt="photo" />
+            <figcaption>Dark Chocolate - قهوة بالشيكولاتة<br />LE 210.00 <del>LE 230</del></figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/images.jfif" alt="photo" />
+            <figcaption>باقة التركي<br />LE 550.00 </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="40/IMG-20241027-WA0002_360x.jpg" alt="photo" />
+            <figcaption>باقة السبريسو<br />LE 500.00 <del>LE 560</del> </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+    </div>
+    <div class="product-container">
+
+        <b> <p> Number Of Products Added : <span id="cartCount">0</span></p></b>
+    </div>
+
+
+    <script>
+        let count = 0;
+
+        function addToCart() {
+            count++;
+            document.getElementById('cartCount').innerText = count;
+        }
+    </script>
+
+</body>
+</html>

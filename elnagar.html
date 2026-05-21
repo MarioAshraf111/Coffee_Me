@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/HH.css" />
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            justify-content: center;
+        }
+
+            .image-container figure {
+                text-align: center;
+                width: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
+
+            .image-container figcaption {
+                margin-top: 5px;
+                font-size: 14px;
+                color: ghostwhite;
+            }
+
+            .image-container figure button {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #0e100fd4;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            </style>
+        <style >
+      
+        #welcomeText {
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+            margin: 50px auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: slideText 5s linear forwards;
+        }
+
+        
+        @keyframes slideText {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+       
+        #main-content {
+            display: none;
+        }
+
+
+
+        
+        .product {
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+            #welcomeText {
+                color: white;
+                background-color: #413535ab;
+            }
+
+        .product-container {
+            margin-left: 25%; 
+            margin-top: 50px;
+            padding: 20px;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .product-container:hover {
+                transform: scale(1.02); 
+            }
+
+
+            .product-container button {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #28a745;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .product-container button:hover {
+                    background-color: #218838;
+                }
+
+            .product-container p {
+                margin-top: 25px;
+                font-size: 24px;
+                color: white;
+                background-color: #413535ab;
+            }
+
+       
+        #cartCount {
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="welcomeText">
+        <b color="white">Welcome To Coffee Me , Enjoy Your Coffee </b>
+    </div>
+
+    <div class="sidebar">
+        <h2 color="black" id="coffee_me">Coffee Me</h2>
+        <a href="index.html">Home</a>
+        <a href="40 dash.html">40 Dash</a>
+        <a href="abu_auf.html">Abo Auf</a>
+        <a href="elnagar.html" class="selected">El-Nagar</a>
+        <a href="accessory.html">accessories</a>
+    </div>
+
+    <div class="image-container">
+        <figure>
+            <img src="elnagar/8-side.jpg" alt="photo" />
+            <pre><figcaption><b>التحويجة الخاصة 225 جم_ حجم وسط</b><br /> <strong>LE 208.25  </strong><br /> <b><del>LE 245.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="elnagar/6-side.jpg" alt="photo" />
+            <pre><figcaption><b>جولد 225 جم _ محوج فاتح</b><br /><b>LE 195.50</b><br /><b><del> LE 230.00 </del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="elnagar/u.png" alt="photo" />
+            <pre><figcaption><b>جولد 225 جم_ سادة فاتح</b><br /><b>LE 195.50</b><br /><b><del> LE 230.00 </del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="elnagar/r.png" alt="photo" />
+            <pre> <figcaption> <b> نجار اورجينال 225 جم _محوج غامق  </b> <br /> <strong>LE 208.25  </strong><br /> <b><del>LE 245.00</del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+        <figure>
+            <img src="elnagar/5-side.jpg" alt="photo" />
+            <pre> <figcaption> <b> نجار اورجينال 225 جم_ سادة غامق  </b> <br /> <strong>LE 187.25  </strong><br /> <b><del>LE 220.00</del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+
+        </figure>
+
+
+        <figure>
+            <img src="elnagar/4-side.jpg" alt="photo" />
+            <pre>  <figcaption>  <b> الخلطة الكولومبية 225 جم_ محوج وسط</b>  <br /><b>LE 240.50</b><br /><b><del>LE 283.50</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+
+
+        <figure>
+            <img src="elnagar/2-side_cbf7d306-d61d-437d-8eb7-4a497758ae38.jpg" alt="photo" />
+            <pre><figcaption> <b> 250 جم سادة وسط</b><br /><b>LE 263.50</b><br /><b><del>LE 310.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="elnagar/2-side.jpg" alt="photo" />
+            <pre><figcaption> <b> اكسترا 100 جم فاتح</b> <br /> <b>LE 129.60</b><br /><b><del>LE 152.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="elnagar/1-side_4.jpg" alt="photo" />
+            <pre>  <figcaption> <b> سادة فاتح 1 كجم</b> <br /><b>LE 599.00</b> <br /><b><del>705.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="elnagar/q.png" alt="photo" />
+            <figcaption> <b>Soprattutto Espresso</b><br /><b>LE 812.00</b><br /><b><del>LE 916.00</del></b> </figcaption>
+            <button onclick="addToCart()">Add To Cart</button>
+
+        </figure>
+        <figure>
+            <img src="elnagar/s.png" alt="photo" />
+            <pre> <figcaption> <b> توليفة لبنان 100% اربيكا</b> <br /> <b>LE 204.00</b><br /><b><del>LE 240.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cartة</button>
+
+        </figure>
+        <figure>
+            <img src="elnagar/1_2024-04-08T20_44_43.242Z.jpg" alt="photo" />
+            <pre><figcaption> <b> قهوة أمريكية</b> <br /><b>LE 336.00</b><br /><b><del>LE 396.00</del></b></figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+
+        </figure>
+        <figure>
+            <img src="elnagar/t.png" alt="photo" />
+            <pre> <figcaption> <b> قهوة عربي</b><br /><b>LE 155.50</b><br /><b><del>LE 183.00</del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="elnagar/3I.jpg" alt="photo" />
+            <pre><figcaption> <b>  محوج 450 جم_4عبوات + عمودفوم هدية</b><br /><b>LE 1350.00</b><br /><b><del>LE 1590.00</del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+        <figure>
+            <img src="elnagar/1-front_8ce07960-cd08-41c5-b9cd-8166dda7a0db.jpg" alt="photo" />
+            <pre> <figcaption> <b>سادة فاتح 500 جم بروفيشنال</b><br /><b>LE 306.00</b><br /><b><del>360.00</del></b> </figcaption></pre>
+            <button onclick="addToCart()">Add To Cart</button>
+        </figure>
+    </div>
+    <div class="product-container">
+       
+        <b> <p> Number Of Products Added : <span id="cartCount">0</span></p></b>
+    </div>
+
+  
+    <script>
+        let count = 0; 
+
+        function addToCart() {
+            count++;
+            document.getElementById('cartCount').innerText = count;
+        }
+    </script>
+</body>
+</html>
